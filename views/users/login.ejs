@@ -1,0 +1,51 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row row-auth">
+  <!-- <div class="col-7 offset-3"> -->
+  <br /><br /><br /><br />
+  <form
+    method="POST"
+    action="/users/login"
+    class="needs-validation form-auth"
+    novalidate
+  >
+    <h2 style="text-align: center">Login</h2>
+    <br />
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        class="form-control login-email-demo"
+        id="email"
+        name="email"
+        type="text"
+        placeholder="Enter your email address"
+        required
+      />
+      <div class="valid-feedback">Looks good!</div>
+      <div class="invalid-feedback">Please enter your email!</div>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input
+        class="form-control login-pass-demo"
+        id="password"
+        name="password"
+        type="password"
+        placeholder="Enter your password"
+        required
+      />
+      <div class="invalid-feedback">Please enter your password!</div>
+    </div>
+    <br />
+    <button class="btn btn-dark" style="margin-top: -0.8rem">Login</button>
+    <button
+      type="button"
+      class="btn btn-dark"
+      style="margin-top: -0.8rem"
+      onclick="getDemoCred();"
+    >
+      Get Credentials
+    </button>
+  </form>
+  <!-- </div> -->
+</div>

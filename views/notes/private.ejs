@@ -1,0 +1,71 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="add-note">
+  <i class="fa-solid fa-pen"></i>
+  <a href="/notes/new">Write Your Note</a>
+</div>
+<div class="all-notes">
+  <div class="all-notes-titles">
+    <h2><a href="/notes">Public Notes</a></h2>
+    <h2><a class="all-notes-active" href="/notes/private">Private Notes</a></h2>
+  </div>
+  <div class="row" id="all-notes-row">
+    <% for(let note of notes) { %> <% if(note.isPrivate == "on") { %> <% if(user
+    && user._id.equals(note.owner._id)) { %>
+    <div class="card home-card">
+      <div class="card-body">
+        <div class="card-top">
+          <div class="card-top-left">
+            <h5 class="card-title">
+              <a href="/notes/<%= note._id %>"><%= note.title %></a>
+            </h5>
+            <p><%= note.owner.email %></p>
+          </div>
+
+          <div class="dropdown">
+            <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-ellipsis"></i>
+            </a>
+
+            <ul class="dropdown-menu">
+              <li class="note-options">
+                <i class="fa-regular fa-eye"></i>
+                <a class="dropdown-item" href="/notes/<%= note._id %>">View</a>
+              </li>
+              <% if(user && user._id.equals(note.owner._id)) { %>
+              <li class="note-options">
+                <i class="fa-solid fa-pen"></i>
+                <a class="dropdown-item" href="/notes/<%= note._id %>/edit"
+                  >Edit</a
+                >
+              </li>
+              <li class="note-options note-delete">
+                <i class="fa-solid fa-trash-can"></i>
+                <form
+                  method="POST"
+                  action="/notes/<%= note._id %>?_method=DELETE"
+                >
+                  <button class="dropdown-item">Delete</button>
+                </form>
+              </li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-middle">
+          <p class="card-text"><%= note.description %></p>
+        </div>
+
+        <div class="card-bottom">
+          <p class="card-text card-bottom-tag"><%= note.tag %></p>
+          <p class="card-text">
+            <%= note.createdAt.toString().split(" ").slice(1, 4).join(" ") %>
+          </p>
+        </div>
+      </div>
+      <div class="border-card"></div>
+    </div>
+    <% } %> <% } %> <% } %>
+  </div>
+</div>

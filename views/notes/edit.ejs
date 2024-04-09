@@ -1,0 +1,71 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row">
+  <div class="col-8 offset-2">
+    <br /><br />
+    <h3>Edit note</h3>
+    <form
+      method="POST"
+      action="/notes/<%= note._id %>?_method=PUT"
+      class="needs-validation"
+      novalidate
+    >
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          id="title"
+          type="text"
+          name="note[title]"
+          value="<%= note.title %>"
+          class="form-control"
+          placeholder="Give your note a title"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please give your note a title!</div>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          name="note[description]"
+          cols="30"
+          rows="10"
+          id="description"
+          class="form-control"
+          placeholder="Write your note content here"
+          required
+        >
+<%= note.description %></textarea
+        >
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">You forgot to add description!</div>
+      </div>
+      <div class="mb-3">
+        <label for="tag" class="form-label">Tag</label>
+        <input
+          id="tag"
+          type="text"
+          name="note[tag]"
+          value="<%= note.tag %>"
+          class="form-control"
+          placeholder="Add a tag to organize your note (optional)"
+        />
+      </div>
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input switch-edit"
+          type="checkbox"
+          role="switch"
+          id="flexSwitchCheckDefault"
+          name="note[isPrivate]"
+        />
+        <label class="form-check-label" for="flexSwitchCheckDefault"
+          >Private</label
+        >
+      </div>
+
+      <br />
+      <button class="btn btn-dark btn-custom">Save</button>&nbsp;&nbsp;
+      <a href="/notes" class="btn btn-dark">Cancel</a>
+    </form>
+  </div>
+</div>
