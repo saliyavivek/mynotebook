@@ -1,23 +1,23 @@
 <nav class="navbar navbar-expand-md bg-body-light sticky-top">
-  <div class="container-fluid">
+  <div class="container-fluid nav-container">
     <a class="navbar-brand" href="/notes">My Notebook</a>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <div>
-          <a class="nav-link" href="/notes">Home</a>
-        </div>
-        <div class="auth">
-          <% if(user) { %>
-          <a class="nav-link" href="/users/logout">Log out</a>
-          <a class="nav-link disabled" aria-disabled="true"
-            >Logged in as <%= user.email %></a
-          >
-          <% } else { %>
-          <a class="nav-link" href="/users/login">Login</a>
-          <a class="nav-link" href="/users/signup">Signup</a>
-          <% } %>
-        </div>
+    <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> -->
+    <div class="navbar-nav">
+      <div>
+        <a class="nav-link nav-home" href="/notes">Home</a>
+      </div>
+      <div class="auth">
+        <% if(user) { %>
+        <a class="nav-link nav-logout" href="/users/logout">Log out</a>
+        <a class="nav-link disabled" aria-disabled="true"
+          >Logged in as <%= user.email %></a
+        >
+        <% } else { %>
+        <a class="nav-link" href="/users/login">Login</a>
+        <a class="nav-link" href="/users/signup">Signup</a>
+        <% } %>
       </div>
     </div>
+    <!-- </div> -->
   </div>
 </nav>

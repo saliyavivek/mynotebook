@@ -21,6 +21,7 @@ body {
     height: 4rem;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100%;
 }
 
 .navbar-nav {
@@ -35,7 +36,7 @@ body {
     align-items: center;
 }
 
-.container-fluid {
+.nav-container {
     padding: 0 7rem !important;
 }
 
@@ -309,7 +310,6 @@ display: -webkit-box;
 
 .show-top-left .card-text{
     margin-top: -0.2rem;
-    /* margin-left: 0.6rem; */
     font-size: 0.9rem;
     color: darkgray;
 }
@@ -408,38 +408,154 @@ display: -webkit-box;
     .form-auth {
         min-width: 70% !important;
     }
-}
 
-@media screen and (max-width: 767px){
-    .row {    
-        width: 100% !important;        
-    }
-
-    .card-bottom-tag {
-        padding-right: 13.5rem;
-    }
-
-    .form-auth {
-        min-width: 90% !important;
-        margin-top: 2rem;
-        margin-right: -1rem;
+    .navbar {
+        min-width: 915px !important;
     }
 }
 
-@media screen and (max-width: 915px){
-    .row {    
-        width: 100% !important;        
-    }
-
-    .card-bottom-tag {
-        padding-right: 13.5rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .container-fluid {
+@media screen and (max-width: 917px)   {
+    .nav-container {
         display: flex !important;
-        justify-content: center !important;
+        justify-content: flex-start !important;
+    }
+
+    .navbar-nav .nav-home{
+        display: none;
+    }
+    .navbar-nav {
+        width: 75%;
+        display: flex !important;
+        justify-content: flex-end !important;
         align-items: center !important;
+    }
+}
+
+@media screen and (max-width: 845px)   {
+    .navbar-nav {
+        width: 65%;
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+    }
+}
+
+@media screen and (max-width: 768px)   {
+    .navbar-nav {
+        width: 50%;
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center;
+    }
+
+    .navbar-expand-md .navbar-nav {
+        flex-direction: row !important;
+    }
+}
+
+@media screen and (max-width: 700px)   {
+    .navbar-nav {
+        width: 35%;
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 668px)   {
+    .container-fluid {
+        margin-left: -2.5rem !important;
+    }
+}
+
+@media screen and (max-width: 570px)   {
+    .container-fluid {
+        margin-left: -4.5rem !important;
+    }
+
+    .all-notes-titles h2 {
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 480px)   {
+    .container-fluid {
+        margin-left: -5.5rem !important;
+    }
+
+    .all-notes-titles h2 {
+        font-size: 1rem;
+        width: 120%;
+    }
+
+    .nav-logout {
+        margin-left: -5rem;
+    }
+}
+
+@media screen and (max-width: 385px)   {
+    .container-main {
+        padding-right: 1.8rem !important;
+    }
+
+    .navbar {
+        width: 100% !important;
+    }
+
+    .all-notes-titles h2 {
+        font-size: 1rem;
+    }
+
+    .all-notes-titles h2 a {
+        width: 100%;
+        margin: 0;
+    }
+
+    .add-note {
+        height: 60px;
+    }
+
+    .add-note i {
+        font-size: 0.65rem;
+    }
+
+    .add-note a {
+        font-size: 0.9rem;
+    }
+
+    .nav-logout {
+        margin-left: -9rem;
+    }
+}
+
+@media screen and (max-width: 361px)   {
+    .navbar-expand-md {
+        width: 100% !important;
+    }
+
+    .all-notes-titles h2 {
+        font-size: 1rem;
+    }
+
+    .all-notes-titles h2 a {
+        width: 100%;
+        margin: 0;
+    }
+
+    .add-note {
+        height: 60px;
+    }
+
+    .add-note i {
+        font-size: 0.65rem;
+    }
+
+    .add-note a {
+        font-size: 0.9rem;
+    }
+
+    .nav-logout {
+        margin-left: -9rem;
     }
 }
