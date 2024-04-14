@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -310,6 +310,7 @@ display: -webkit-box;
 
 .show-top-left .card-text{
     margin-top: -0.2rem;
+    /* margin-left: 0.6rem; */
     font-size: 0.9rem;
     color: darkgray;
 }
@@ -366,16 +367,15 @@ display: -webkit-box;
     justify-content: center !important;
     align-items: center !important;
     width: 100%;
-    height: 100%;
+    height: 100vh;
 
 }
 
 .form-auth {
-    margin-top: 6rem !important;
+    margin-top: -3rem !important;
     background-color: #fff;
     border-radius: 10px;
     padding: 2rem !important;
-    padding-bottom: 2.5rem !important;
     width: 40% !important;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -406,14 +406,13 @@ display: -webkit-box;
     }
 
     .form-auth {
-        min-width: 70% !important;
+        min-width: 450px !important;
     }
 
     .navbar {
         min-width: 915px !important;
     }
 }
-
 @media screen and (max-width: 917px)   {
     .nav-container {
         display: flex !important;
@@ -429,6 +428,23 @@ display: -webkit-box;
         justify-content: flex-end !important;
         align-items: center !important;
     }
+
+    .navbar {
+        min-width: 917px !important;
+    }
+
+    .f-info {
+        width: 917px;
+    }
+
+    .row-auth {
+        width: 696px;
+        margin-left: 50px !important;
+    }
+
+    .form-auth {
+        min-width: 450px !important;
+    }
 }
 
 @media screen and (max-width: 845px)   {
@@ -437,6 +453,22 @@ display: -webkit-box;
         display: flex !important;
         justify-content: flex-end !important;
         align-items: center !important;
+    }
+
+    .navbar {
+        min-width: 845px !important;
+    }
+
+    .f-info {
+        width: 845px;
+    }
+
+    .nav-logout {
+        margin-right: -5rem;
+    }
+
+    .form-auth {
+        min-width: 450px !important;
     }
 }
 
@@ -451,14 +483,51 @@ display: -webkit-box;
     .navbar-expand-md .navbar-nav {
         flex-direction: row !important;
     }
+
+    .auth .nav-link {
+        margin-left: 0.5rem;
+    }
+
+    .btn-expand {
+        width: 100%;
+        margin: 1.8rem 0;
+    }
+
+    .f-info {
+        width: 768px;
+    }
+
+    .form-auth {
+        padding-bottom: 20px !important;
+    }
+
+    .navbar {
+        min-width: 768px !important;
+    }
+
+    .row-auth {
+        margin-left: -50px !important;
+    }
 }
 
 @media screen and (max-width: 700px)   {
     .navbar-nav {
-        width: 35%;
+        width: 55%;
         display: flex !important;
         justify-content: flex-end !important;
         align-items: center;
+    }
+
+    .navbar {
+        min-width: 700px !important;
+    }
+
+    .f-info {
+        width: 700px;
+    }
+
+    .row-auth {
+        margin-left: -100px !important;
     }
 }
 
@@ -466,43 +535,85 @@ display: -webkit-box;
     .container-fluid {
         margin-left: -2.5rem !important;
     }
+
+    .navbar {
+        min-width: 668px !important;
+    }
+
+    .add-note,.all-notes {
+        width: 500px;
+        margin: 2rem;
+    }
+
+    .f-info {
+        width: 668px;
+    }
+
+    .row-auth {
+        margin-left: -100px !important;
+    }
 }
 
 @media screen and (max-width: 570px)   {
-    .container-fluid {
+    /* .container-fluid {
         margin-left: -4.5rem !important;
-    }
+    } */
 
     .all-notes-titles h2 {
         font-size: 1rem;
     }
+
+    .navbar {
+        min-width: 570px !important;
+    }
+
+    .navbar-nav {
+        width: 57%;
+        display: flex !important;
+        justify-content: flex-end !important;
+        align-items: center;
+    }
+
+    .add-note {
+        width: 500px;
+        margin: 2rem;
+    }
+
+    .f-info {
+        width: 570px;
+    }
+
+    .row-auth {
+        width: 600px;
+        margin-left: -2rem !important;
+    }
+
+    /* .form-auth {
+        width: 200px !important;
+    } */
 }
 
 
 @media screen and (max-width: 480px)   {
-    .container-fluid {
+    /* .container-fluid {
         margin-left: -5.5rem !important;
-    }
+    } */
 
     .all-notes-titles h2 {
         font-size: 1rem;
         width: 120%;
     }
 
-    .nav-logout {
-        margin-left: -5rem;
+    .row-auth {
+        margin-left: -2.5rem !important;
     }
+
+    /* .nav-logout {
+        margin-left: -5rem;
+    } */
 }
 
 @media screen and (max-width: 385px)   {
-    .container-main {
-        padding-right: 1.8rem !important;
-    }
-
-    .navbar {
-        width: 100% !important;
-    }
-
     .all-notes-titles h2 {
         font-size: 1rem;
     }
@@ -525,13 +636,38 @@ display: -webkit-box;
     }
 
     .nav-logout {
-        margin-left: -9rem;
+        margin-left: -11.2rem;
     }
+
+    .navbar-nav {
+        display: none;
+    }
+
+    .auth .nav-link {
+        margin-left: 0.5rem;
+    }
+
+    .form-auth {
+        min-width: 90% !important;
+        margin-top: 2rem;
+        margin-right: -1rem;
+    }
+
+    .btn-expand {
+        width: 100%;
+        margin: 1.8rem 0;
+    }
+
+    .form-auth {
+        padding-bottom: 20px !important;
+    }
+
+    
 }
 
 @media screen and (max-width: 361px)   {
-    .navbar-expand-md {
-        width: 100% !important;
+    .navbar {
+        min-width: 580px !important;
     }
 
     .all-notes-titles h2 {
@@ -559,3 +695,81 @@ display: -webkit-box;
         margin-left: -9rem;
     }
 }
+
+/* @media screen and (max-width: 361px)   {
+    .navbar {
+        min-width: 358px !important;
+    }
+} */
+
+
+
+
+/* @media screen and (max-width: 736px) {
+    .nav-container {
+        padding: 0 0 0 12vw  !important;
+    }
+
+    .auth .nav-logout {
+        width: 100px;
+    }
+} */
+
+/* @media screen and (max-width: 768px){
+    .nav-link {
+        display: block !important;
+    }
+
+    .navbar {
+        padding: 0 6rem !important;
+    }
+    .nav-container{
+        display: flex !important;
+        justify-content: flex-start !important;
+    }
+    .row {    
+        width: 100% !important;        
+    }
+
+    .all-notes-titles h2 {
+        font-size: 1rem;
+    }
+
+    .card-bottom-tag {
+        padding-right: 13.5rem;
+    }
+
+    .form-auth {
+        min-width: 90% !important;
+        margin-top: 2rem;
+        margin-right: -1rem;
+    }
+}
+
+@media screen and (max-width: 915px){
+    .row {    
+        width: 100% !important;        
+    }
+
+    .card-bottom-tag {
+        padding-right: 13.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-fluid {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+
+@media screen and (max-width: 535px){
+    .card-bottom-tag {
+        padding-right: 0;
+    }
+
+    .all-notes-titles h2 {
+        font-size: 1rem;
+    }
+} */
