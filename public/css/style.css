@@ -10,6 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    line-height: normal;
 }
 
 .container {
@@ -109,7 +110,6 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* height: auto; */
     margin-bottom: 0.4rem;
 }
 
@@ -185,15 +185,11 @@ body {
     display: flex;
     justify-content: start;
     max-height: 120px;
-    /* white-space: nowrap; */
-    /* overflow: hidden;
-    text-overflow: ellipsis; */
-
     overflow: hidden;
-text-overflow: ellipsis;
-display: -webkit-box;
--webkit-line-clamp: 5;
--webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 }
 
 .card-bottom {
@@ -204,12 +200,7 @@ display: -webkit-box;
     justify-content: space-between;
 }
 
-.card-bottom-tag {
-    /* padding-right: 9.5rem; */
-}
-
 .border-card {
-    /* background-color: #87baf5; */
     height: 0.2rem;
     width: 100%;
 }
@@ -368,7 +359,6 @@ display: -webkit-box;
     align-items: center !important;
     width: 100%;
     height: 100vh;
-
 }
 
 .form-auth {
@@ -381,6 +371,9 @@ display: -webkit-box;
 }
 
 @media screen and (max-width: 1400px){
+    * {
+        overflow-x: hidden;
+    }
     .row .card{    
         width: 93% !important;        
     }
@@ -411,6 +404,10 @@ display: -webkit-box;
 
     .navbar {
         min-width: 915px !important;
+    }
+
+    .navbar-brand {
+        padding-left: 10px;
     }
 }
 @media screen and (max-width: 917px)   {
@@ -666,8 +663,34 @@ display: -webkit-box;
 }
 
 @media screen and (max-width: 361px)   {
-    .navbar {
-        min-width: 580px !important;
+    .nav-container {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+    
+    .navbar-nav {
+        padding: 0 !important;
+        margin-left: -2.1rem !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .row-auth {
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .form-auth {
+        width: 320px;
+        margin: 0;
+        margin-top: -10rem !important;
+    }
+
+    .f-info {
+        width: 360px;
     }
 
     .all-notes-titles h2 {
@@ -695,81 +718,3 @@ display: -webkit-box;
         margin-left: -9rem;
     }
 }
-
-/* @media screen and (max-width: 361px)   {
-    .navbar {
-        min-width: 358px !important;
-    }
-} */
-
-
-
-
-/* @media screen and (max-width: 736px) {
-    .nav-container {
-        padding: 0 0 0 12vw  !important;
-    }
-
-    .auth .nav-logout {
-        width: 100px;
-    }
-} */
-
-/* @media screen and (max-width: 768px){
-    .nav-link {
-        display: block !important;
-    }
-
-    .navbar {
-        padding: 0 6rem !important;
-    }
-    .nav-container{
-        display: flex !important;
-        justify-content: flex-start !important;
-    }
-    .row {    
-        width: 100% !important;        
-    }
-
-    .all-notes-titles h2 {
-        font-size: 1rem;
-    }
-
-    .card-bottom-tag {
-        padding-right: 13.5rem;
-    }
-
-    .form-auth {
-        min-width: 90% !important;
-        margin-top: 2rem;
-        margin-right: -1rem;
-    }
-}
-
-@media screen and (max-width: 915px){
-    .row {    
-        width: 100% !important;        
-    }
-
-    .card-bottom-tag {
-        padding-right: 13.5rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .container-fluid {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
-}
-
-@media screen and (max-width: 535px){
-    .card-bottom-tag {
-        padding-right: 0;
-    }
-
-    .all-notes-titles h2 {
-        font-size: 1rem;
-    }
-} */
